@@ -28,7 +28,8 @@ const router = new VueRouter({
     },
     {
       path: '/et',
-      component:Et,
+      component:(resolve) => { 
+        require([ Et + '.vue'], resolve); },
         children: [
         {
           path: 'order/opa/',
