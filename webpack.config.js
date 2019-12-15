@@ -1,13 +1,23 @@
 var path = require('path')
 var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var package     = require('./package.json');
 
 module.exports = {
-  entry: './src/main.js',
+  entry: ['./src/main.js','./src/assets/js/a.js','./src/assets/js/b.js'],
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    publicPath: '',
     filename: 'build.js'
   },
+  
+  plugins: [
+    new HtmlWebpackPlugin({
+        hash: true,
+        filename: './index.html', //relative to root of the application
+        template: path.resolve(__dirname, './index.html'),
+    })
+],
   module: {
     rules: [
       {
