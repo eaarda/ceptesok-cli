@@ -5,7 +5,7 @@ import VueRouter from 'vue-router'
 import Home from './components/Home.vue'
 import Et from './components/Et.vue'
 import Sut from './components/Sut.vue'
-import Kahvaltilik from './components/Kahvaltilik.vue'
+import Kahvaltilik from './components/kahvaltilik.vue'
 import Temizlik from './components/Temizlik.vue'
 import Endusuk  from './components/Endusuk.vue'
 import Normalurun from './components/Normalurun.vue'
@@ -28,8 +28,7 @@ const router = new VueRouter({
     },
     {
       path: '/et',
-      component:(resolve) => { 
-        require([ Et + '.vue'], resolve); },
+      component:Et,
         children: [
         {
           path: 'order/opa/',
