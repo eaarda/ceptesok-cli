@@ -59,7 +59,7 @@
             <!---->
             <!---->
         </div>
-        <button v-on:click="goo(product.serial_productid)" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Sepete Ekle
+        <button v-on:click="sepeteEkle(product)" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Sepete Ekle
         </button>
         <!---->
     </div>
@@ -79,6 +79,9 @@ export default {
         }
      },
      methods:{
+       sepeteEkle:function(a){
+             this.$store.commit('addProduct',a)
+       },
         gettype:function(miktar){
            return miktar == 1 ? "Adet" : "Kg"
         },
