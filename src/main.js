@@ -19,7 +19,6 @@ Vue.component('BadgerAccordion', BadgerAccordion)
 Vue.component('BadgerAccordionItem', BadgerAccordionItem)
 Vue.use(VueRouter)
 
-
 const router = new VueRouter({
   routes: [
     {
