@@ -117,7 +117,7 @@ export default {
             list[0].className="list-icon";
             list[1].className="grid-icon";
             this.$store.commit('changeGrid',e)
-        },
+        }
    },
 }
 </script>

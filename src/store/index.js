@@ -5,11 +5,19 @@ Vue.use(Vuex);
 
 const state={
     SViewSquare:true,
+    sepet:[],
+    total:0
 };
 const getters={
     getGridState(state){
         console.log(state.SViewSquare)
         return state.SViewSquare
+    },
+    getCartPro(state){
+        return state.sepet;
+    },
+    getTotal(state){
+        return state.total;
     }
 };
 const mutations={
@@ -21,6 +29,13 @@ const mutations={
             state.SViewSquare = true
             eventN.path[0].className +=" active"
         }
+    },
+    addProduct(state,proid){
+        state.sepet.push(proid)
+        state.total+=  parseFloat(proid.serial_market_price)
+    },
+    changeTotal(state,price){
+        state.total += price;
     }
 };
 const actions={};
