@@ -56,12 +56,11 @@
         <div class="product-description">
         <h3 class="product-title"><router-link :to="{name: 'Urun',path: '/urun/'+product.link_name, params:{id:product.serial_productid}}"> <h3 class="product-title">{{product.warranty_description}}</h3></router-link></h3>
             <p class="product-subtitle">1 {{gettype(product.unit)}}</p>
-            <!---->
-            <!---->
+            
         </div>
-        <button v-on:click="goo(product.serial_productid)" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Sepete Ekle
+        <button v-on:click="sepeteEkle(product)" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Sepete Ekle
         </button>
-        <!---->
+  
     </div>
 </div>
 </li>
@@ -83,6 +82,9 @@ export default {
        return this.$store.getters.getGridState
     },
      methods:{
+       sepeteEkle:function(a){
+             this.$store.commit('addProduct',a)
+       },
         gettype:function(miktar){
            return miktar == 1 ? "Adet" : "Kg"
         },

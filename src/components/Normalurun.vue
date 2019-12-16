@@ -56,12 +56,11 @@
         <div class="product-description">
        <router-link :to="{name: 'Urun',path: '/urun/'+product.link_name, params:{id:product.serial_productid}}"> <h3 class="product-title">{{product.warranty_description}}</h3></router-link>
             <p class="product-subtitle">1 {{gettype(product.unit)}}</p>
-            <!---->
-            <!---->
+            
         </div>
-        <button v-on:click="getdeneme()" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Sepete Ekle
+        <button v-on:click="sepeteEkle(product)" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Sepete Ekle
         </button>
-        <!---->
+        
     </div>
 </div>
 </li>
@@ -78,8 +77,8 @@ export default {
         }
      },
      methods:{
-       getdeneme:function(){
-         console.log(this.data)
+       sepeteEkle:function(a){
+             this.$store.commit('addProduct',a)
        },
         gettype:function(miktar){
            return miktar == 1 ? "Adet" : "Kg"
