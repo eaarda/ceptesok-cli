@@ -5,240 +5,17 @@
         <div id="checkout_app">
             <div>
                 <header class="checkout">
-                    <div class="wrapper header-wrap"><a href="/" class="header-control header-backlink"><i class="control-icon icon-arrow-left"></i> Alışverişe Geri Dön</a>
-                        <a href="/" class="header-logo"><img src="../img/logo.svg"></a>
+                    <div class="wrapper header-wrap"><a href="/siparis/#/sepet" class="header-control header-backlink"><i class="control-icon icon-arrow-left"></i> Sepete Geri Dön</a>
+                    <a href="/" class="header-logo"><img src="../img/logo.svg"></a>
                     </div>
-                    <div id="modal_login" class="modal login" refresh="true">
-                        <div class="modal-element">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div id="login_terms" class="clickshow-subject login-terms modal-body">
-                                        <div class="modal-header">
-                                            <button data-subject="login_terms" class="modal-close no-action clickshow"><i class="icon-close"></i></button>
-                                            <h3 class="header-title">
-                            Yeni Kullanıcı Sözleşmesi
-                        </h3></div>
-                                        <div class="modal-inner">
-                                            <div class="terms-container white">
-                                                <div class="terms-wrap scrollbar mCustomScrollbar _mCS_4 mCS_no_scrollbar scrollbar-initialized">
-                                                    <div id="mCSB_4" class="mCustomScrollBox mCS-custom mCSB_vertical mCSB_inside" style="max-height: 0px;" tabindex="0">
-                                                        <div id="mCSB_4_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-                                                            <div class="textarea">
-                                                                <h3>MADDE 2-SÖZLEŞMENİN KONUSU ve KAPSAMI</h3>
-                                                                <p>İşbu Mesafeli Satış Sözleşmesi (“Sözleşme”) Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmelere Dair Yönetmelik’e uygun olarak düzenlenmiştir. İşbu Sözleşme’nin tarafları işbu Sözleşme tahtında Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmelere Dair Yönetmelik’ten kaynaklanan yükümlülük ve sorumluluklarını bildiklerini ve anladıklarını kabul ve beyan ederler. İşbu sözleşmenin konusu, Alıcı'nın, Doğuş Planet Elektronik Ticaret ve Bilişim Hizmetleri A.Ş (“Doğuş Planet”)’ye ait www.n11.com veya sunulan hizmete bağlı diler alan adları üzerinden (“Websitesi”), Satıcıya ait ürünlerin satın alınmasına yönelik elektronik olarak sipariş verdiği, sözleşmede belirtilen niteliklere sahip mal/hizmetin satışı ve teslimi ile ilgili olarak Tüketicinin Korunması Hakkındaki Kanun ve Mesafeli Sözleşmelere Dair Yönetmelik hükümleri gereğince tarafların hak ve yükümlülüklerinin saptanması oluşturur.</p>
-                                                                <p>İşbu sözleşmenin akdedilmesi tarafların ayrı ayrı Doğuş Planet ile akdetmiş oldukları websitesi üyelik sözleşmelerinin hükümlerinin ifasını engellemeyecek olup taraflar işbu Sözleşme konusu ürün satışında Doğuş Planet’in herhangi bir şekilde taraf olmadığını ve Sözleşme kapsamında tarafların yükümlülüklerini yerine getirmeleri ile ilgili herhangi bir sorumluluk ve taahhüdü bulunmadığını kabul ve beyan ederler.</p>
-                                                                <h3>MADDE 3 – SÖZLEŞME KONUSU MALIN TEMEL NİTELİKLERİ VE BEDELİ</h3>
-                                                                <p>Ürün/Ürünlerin cinsi ve türü, miktarı, marka/modeli, rengi ve vergiler dahil satış bedeli ve teslimat bilgileri aşağıdaki gibidir:</p>
-                                                                <p>Ödeme Şekli ve Planı: Çevirimiçi sanal POS uygulaması üzerinden ..........Bankası kredi kartı ile .... ay .... (yazıyla ..............................................) TL aylık ödeme / peşin ........... TL ödeme</p>
-                                                            </div>
-                                                        </div>
-                                                        <div id="mCSB_4_scrollbar_vertical" class="mCSB_scrollTools mCSB_4_scrollbar mCS-custom mCSB_scrollTools_vertical" style="display: none;">
-                                                            <div class="mCSB_draggerContainer">
-                                                                <div id="mCSB_4_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; top: 0px;">
-                                                                    <div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
-                                                                </div>
-                                                                <div class="mCSB_draggerRail"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-header">
-                                        <button class="modal-close"><i class="icon-close"></i></button>
-                                    </div>
-                                    <div class="section login-content">
-                                        <div class="login-right">
-                                            <div id="member-login" class="login-form login clickshow-subject noanim grid-container narrow-vertical inputform enable show">
-                                                <div class="grid-row">
-                                                    <div class="grid-col nogap-top form-alternatives">
-                                                        <div class="col-xs-12 padding-reset clickshow notoggle" data-subject="member-register" data-clickshow-group="member-sections">
-                                                            <div class="col-xs-6 xs-pl0 xs-pb0"><span class="btn btnFaceBook flexRow xs-textleft" style="background-color: blue; color: white;"><img src="/assets/img/facebook.svg" alt="">
-        Facebook ile  giriş yap.
-      </span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row" style="display: none;">
-                                                    <div class="grid-col">
-                                                        <div class="form-seperator"><span>veya</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col nogap-t"> </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col">
-                                                        <div class="inputwrap type-text">
-                                                            <input type="text" name="phone" autocomplete="tel-national" maxlength="11" placeholder="Cep Telefonu">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col">
-                                                        <div class="inputwrap type-password">
-                                                            <input type="password" name="password" autocomplete="current-password" placeholder="Parola">
-                                                            <button type="button" class="password-peek"></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col gap-top-high">
-                                                        <div class="checkwrap type-checkbox">
-                                                            <input type="checkbox" id="input_dummy_5">
-                                                            <label for="input_dummy_5"><span></span> Beni hatırla</label>
-                                                        </div> <a onclick="checkRegisterModalEnabled()" data-modal="modal_passwordrecovery" class="form-innerlink fright modaltrigger">Şifrenizi unuttunuz mu?</a></div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col gap-top-high">
-                                                        <button class="btn green block">
-                                                            Giriş yap
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col">
-                                                        <div class="form-seperator"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col nogap-top form-alternatives"><span class="alternatives-title">Hesabınız yok mu?</span>
-                                                        <button data-subject="member-register" data-clickshow-group="member-sections" class="clickshow notoggle">Şimdi Kayıt Ol</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="member-register" class="login-form register clickshow-subject noanim grid-container narrow-vertical inputform">
-                                                <div class="col-xs-12 padding-reset">
-                                                    <div class="col-xs-6 xs-pl0 xs-pb0"><span class="btn btnFaceBook flexRow xs-textleft" style="background-color: blue; color: white;"><img src="/assets/img/facebook.svg" alt="">
-        Facebook ile  giriş yap.
-      </span></div>
-                                                </div>
-                                                <div class="grid-row" style="display: none;">
-                                                    <div class="grid-col">
-                                                        <div class="form-seperator"><span>veya</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col">
-                                                        <div class="inputwrap type-text">
-                                                            <input type="text" name="email" autocomplete="email" placeholder="E-Posta Adresi">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col">
-                                                        <div class="inputwrap type-text">
-                                                            <input type="text" name="phone" autocomplete="tel-national" maxlength="11" placeholder="Cep Telefonu">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col">
-                                                        <div class="inputwrap type-text">
-                                                            <input type="text" name="name" autocomplete="name" placeholder="Ad Soyad">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col">
-                                                        <div class="inputwrap type-password">
-                                                            <input type="password" name="password" autocomplete="new-password" placeholder="Parola">
-                                                            <button type="button" class="password-peek"></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col gap-top-high">
-                                                        <div class="checkwrap type-checkbox">
-                                                            <input type="checkbox" id="register_agreement127">
-                                                            <label for="register_agreement127"><span></span>
-                                                                <button onclick="checkRegisterModalEnabled()" data-modal="modal_registerterms" class="form-innerlink modaltrigger">Kullanım koşulları</button>'nı okudum,
-                                                                <br>onaylıyorum</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col">
-                                                        <div class="checkwrap type-checkbox">
-                                                            <input type="checkbox" id="register_notification127">
-                                                            <label for="register_notification127"><span></span> Bana özel kampanyalardan haberdar olmak istiyorum</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col gap-top-high">
-                                                        <button class="btn green block"><span>Kayıt ol</span></button>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col">
-                                                        <div class="form-seperator"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-row">
-                                                    <div class="grid-col nogap-top form-alternatives"><span class="alternatives-title">Hesabınız var mı?</span>
-                                                        <button data-subject="member-login" data-clickshow-group="member-sections" class="clickshow notoggle">Giriş Yap</button>
-                                                    </div>
-                                                </div>
-                                                <div id="modal_sms_confirmation" class="modal modal-mini password-recovery">
-                                                    <div class="modal-element">
-                                                        <div class="modal-content">
-                                                            <div class="modal-body passwordrecovery-body-form">
-                                                                <div class="modal-header">
-                                                                    <button class="modal-close"><i class="icon-close"></i></button>
-                                                                    <h3 class="header-title">
-                        Cep telefonu doğrula
-                    </h3></div>
-                                                                <div class="modal-inner">
-                                                                    <form class="passwordrecovery-form grid-container inputform">
-                                                                        <div class="grid-row">
-                                                                            <div class="grid-col nogap-t">
-                                                                                <p class="validation-hideonerror">Hesabınızla bağlantılı cep telefonunuza hesabınızı aktif etmek için bir sms gönderdik.</p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="grid-row">
-                                                                            <div class="grid-col">
-                                                                                <div class="inputwrap type-text">
-                                                                                    <input type="text" placeholder="Aktivasyon Kodu">
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="grid-row">
-                                                                            <div class="grid-col">
-                                                                                <button type="button" class="btn green block">Hesabımı doğrula</button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                            <div class="modal-body passwordrecovery-body-complete">
-                                                                <div class="modal-inner"><img src="/assets/img/member-passwordreset-complete.svg" class="passwordrecovery-complete-image">
-                                                                    <h3 class="passwordrecovery-complete-title">Hesabınız aktif edilmiştir.</h3>
-                                                                    <button class="btn green wide modal-closetrigger">Kapat</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="login-left">
-                                            <a href="/hazir-listeler"><img src="/assets/img/dummy/login-banner.jpg" class="login-banner"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#"><img alt="Yukarı Çık" class="yukarikaydir" src="../img/yc.png" style="display: block;"></a>
                 </header>
-                <!----> 
                 <div class="section wrapper checkout-wrap checkout-cart">
                     <div>
                         <main class="section checkout-section cart-items">
                             <div class="section checkout-head">
                                 <h1 class="head-title">Sepet</h1>
-                                <p class="head-subtitle">4 Adet Ürün Bulunuyor</p>
+                                <p class="head-subtitle"><span class="basket-quantity">{{getProCo}}</span> Adet Ürün Bulunuyor</p>
                             </div>
                            <ul class="items-list">
                             <sepette-urunler v-for="product in products" :product="product" :key="product.serial_productid"/>
@@ -254,7 +31,7 @@
                                     <br>Toplam Tutar:
                                 </p>
                                 <div class="pricebox {'plain': true}">
-                                    <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">166</span><span class="pricebox-decimal">70</span></div>
+                                    <div class="pricebox-content"><span class="currency pricebox-currency"></span> {{$store.state.total}}</div>
                                 </div>
                             </div>
                             <!---->
@@ -3097,15 +2874,44 @@ export default {
    },
     data () {
     return {
+        active:false,
+        show:false,
         products:"",
     }
-  },
-  computed(){
-      this.products=this.products=this.$store.state.sepet;
-  },
-  created(){
-      this.products=this.products=this.$store.state.sepet;
-  }
+    },
+    methods:{
+          go:function(e){
+            if(this.active == true){
+                this.active=false; this.show=false;
+            }else{
+                 this.active=true; this.show=true;
+            }
+         },
+         getPro:function(){
+            this.products=this.$store.state.sepet;
+            console.log(this.$store.state.sepet)
+          }
+    },
+    computed:{
+         getProCo:function(){
+             return this.$store.state.sepet.length
+         },
+         totalf:function(){
+             return this.$store.state.total;
+          }
+     },
+     watch:{
+        '$store.state.sepet'(){
+           this.getPro();
+        }
+     },
+      mounted() {
+            this.getPro();
+    },
+    created(){
+        this.products=this.products=this.$store.state.sepet;
+    },
+>>>>>>> 2286be4e944c586110945e77d6a3c4ab0406513b
 }
 </script>
 
