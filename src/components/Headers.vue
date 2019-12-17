@@ -39,9 +39,9 @@
                         <Sepet/> 
                         <div class="right-usercontrols not-logged">
                             <div class="usercontrols-desktop"><i class="icon-user-2 usercontrols-icon"></i> <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-login" class="usercontrols-button top modaltrigger clickshow notoggle">
-                                <div  @click="routelogin">Giriş Yap</div>
+                                <div  @click="routelogin('Giris')">Giriş Yap</div>
                                 </button> <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-register" class="usercontrols-button sub clickshow notoggle modaltrigger">
-                                Üye Ol
+                               <div  @click="routelogin('Kayit')">Üye Ol</div>
                                 </button>
                             </div>
                             <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-login" class="usercontrols-mobile modaltrigger clickshow notoggle"><i class="icon-user-2 usercontrols-icon"></i></button>
@@ -3736,8 +3736,8 @@ export default {
             }
         }
      },
-     routelogin:function(){
-         if(this.$route.path !== "/" && this.$route.path !== "/Giris" ) this.$router.push("/Giris")
+     routelogin:function(a){
+         if(this.$route.path !== "/" && this.$route.path !== "/Giris" &&  this.$route.path !== "/Kayit") this.$router.push("/"+a)
      },
      hideOne:function(e){
           if(this.hideBar==true)
