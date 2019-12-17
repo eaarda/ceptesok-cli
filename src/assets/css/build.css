@@ -2045,8 +2045,8 @@ h1,h2,h3,h4,h5,h6{
     width:2.57142857rem
 }
 .productbox-mini.basket.has-remove .product-remove .product-removebutton{
-    background-color:#cfcfcf;
-    color:#fff;
+    background-color:white;
+    color:black;
     border-radius:50%;
     font-size:.71428571rem
 }

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <a href="#"><img alt="Yukarı Çık" class="yukarikaydir" src="../img/yc.png" style="display: block;"></a>
         <div id="messenger-container" class="fixed"></div>
         <div id="checkout_app">
             <div>

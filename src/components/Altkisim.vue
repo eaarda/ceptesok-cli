@@ -101,7 +101,7 @@ export default {
 .icon-close{
    background-color:white;
    padding: 1rem 1rem 1rem 1rem;
-   border: 3px solid #FFB20D;
+   border: 3px solid #FFe000;
    border-radius: 2rem;
    font-size: 25px;
    font-weight: 100;
