@@ -33,9 +33,14 @@ const mutations={
     addProduct(state,proid){
         state.sepet.push(proid)
         state.total+=  parseFloat(proid.serial_market_price)
+        localStorage.setItem("urun",JSON.stringify(state))
     },
     changeTotal(state,price){
         state.total += price;
+    },
+    windowload(state){
+        this.replaceState(Object.assign(state,JSON.parse(localStorage.getItem('urun'))))
+        console.log(state)
     }
 };
 const actions={};

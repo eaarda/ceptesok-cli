@@ -12,7 +12,7 @@
                 </div>
                 <div class="productC-price-btn">
                     <p><spanC>{{product.serial_market_price}}</spanC><span class="currency"></span></p>
-                    <button type="button">Sepete Ekle</button>
+                    <button type="button" v-on:click="sepeteEkle(product)">Sepete Ekle</button>
                 </div>
                 </div>
             </div>

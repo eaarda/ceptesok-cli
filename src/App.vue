@@ -11,6 +11,9 @@ import sehircss from './assets/css/sehir.css'
 
 export default {
   name: 'app',
+  created(){
+    this.$store.commit('windowload')
+  },
   data () {
     return {};
   }

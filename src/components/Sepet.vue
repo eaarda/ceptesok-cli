@@ -47,7 +47,7 @@
                 <div class="basket-controls full grid-container narrow-vertical">
                     <div class="controls-prices grid-row">
                         <div class="prices-val grid-col gap-bottom-high highlight"> KDV Dahil Toplam Tutar:
-                            <div class="val-price"><span class="currency"></span> {{totalf}} </div>
+                            <div class="val-price"><span class="currency"></span> {{$store.state.total}} </div>
                         </div>
                     </div>
                     <div class="controls-buttons grid-row">
