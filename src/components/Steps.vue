@@ -1,30 +1,34 @@
 <template>
 <div>
-    <form>
+    <header class="checkout">
+        <div class="wrapper header-wrap"><a href="/siparis/#/sepet" class="header-control header-backlink"><i class="control-icon icon-arrow-left"></i> Sepete Geri Dön</a>
+        <a href="/" class="header-logo"><img src="../img/logo.svg"></a>
+        </div>
+    </header>
+    
+<nav class="section checkout-nav">
+   <div class="wrapper"> 
+       
+       <form>
+           
+           <section v-if="step == 1" class="list-item active"> Teslimat Zamanı
 
-        <section v-if="step == 1">
-            <h3>Step 1</h3>
-            <input type="text" placeholder="Whatis your name"
-            class="form-control form-control-lg">
-        </section>
+           </section>
+           
+           <section v-if="step == 2" class="list-item"> Ödeme İşlemleri>
 
-        <section v-if="step == 2">
-            <h3>Step 2</h3>
-             <input type="email" placeholder="Whatis your email"
-            class="form-control form-control-lg">
-             <input type="tel" placeholder="Whatis your phone number"
-            class="form-control form-control-lg">
-        </section>
+           </section>
+           
+           <section v-if="step == 3" class="list-item"> Sipariş Özeti>
 
-        <section v-if="step == 3">
-            <h3>Step 3</h3>
-             <textarea placeholder="Type your message"
-            class="form-control form-control-lg"></textarea>
-        </section>
-
-        <button v-if="step != totalsteps" @click.prevent="nextStep">Next Step</button>
-        <button v-if="step != 1" @click.prevent="prevStep">Previous Step</button>
-    </form>
+           </section>
+           
+           <button v-if="step != totalsteps" @click.prevent="nextStep">Next Step</button>
+           <button v-if="step != 1" @click.prevent="prevStep">Previous Step</button>
+        
+        </form>
+    </div>
+</nav>
 
 </div>
   
@@ -55,7 +59,7 @@ export default {
     },
       prevStep:function()
       {
-        this.step--;
+          this.step--;
       }
   },
   
