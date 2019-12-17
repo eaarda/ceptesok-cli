@@ -61,7 +61,7 @@
         </div>
         <button v-on:click="sepeteEkle(product)" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Sepete Ekle
         </button>
-        z
+        
     </div>
 </div>
 </li>

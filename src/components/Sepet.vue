@@ -69,10 +69,12 @@
 
 <script>
 import SepetteUrunler from './SepetteUrunler.vue'
+import Siparis from './Siparis.vue'
 export default {
         name:'Sepet',
         components:{
      SepetteUrunler,
+     Siparis,
    },
      data() {
        return {

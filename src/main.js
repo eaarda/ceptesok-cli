@@ -13,6 +13,7 @@ import Enyeni from './components/Enyeni.vue'
 import Urun from './components/Urun.vue'
 import Yardim from './components/Yardim.vue'
 import Login from './components/Login.vue'
+import Siparis from './components/Siparis.vue'
 import {BadgerAccordion, BadgerAccordionItem} from 'vue-badger-accordion'
 
 Vue.component('BadgerAccordion', BadgerAccordion)
@@ -155,6 +156,11 @@ const router = new VueRouter({
     {
       path:'*',
       component:Home,
+    },
+    {
+    name:'Siparis',
+    path:'/Siparis',
+    component:Siparis,
     },
   ],
   mode :'history'
