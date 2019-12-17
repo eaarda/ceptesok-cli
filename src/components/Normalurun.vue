@@ -56,11 +56,12 @@
         <div class="product-description">
        <router-link :to="{name: 'Urun',path: '/urun/'+product.link_name, params:{id:product.serial_productid}}"> <h3 class="product-title">{{product.warranty_description}}</h3></router-link>
             <p class="product-subtitle">1 {{gettype(product.unit)}}</p>
-            
+            <!---->
+            <!---->
         </div>
         <button v-on:click="sepeteEkle(product)" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Sepete Ekle
         </button>
-        
+        z
     </div>
 </div>
 </li>
