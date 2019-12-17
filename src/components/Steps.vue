@@ -471,7 +471,6 @@
                                             </tr>
                                             <tr>
                                                 <td>Telefon</td>
-                                                <td>5388101580</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -609,7 +608,6 @@
                                             </tr>
                                             <tr>
                                                 <td>Telefon</td>
-                                                <td>5388101580</td>
                                             </tr>
                                         </tbody>
                                     </table>
