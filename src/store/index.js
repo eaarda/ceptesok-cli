@@ -40,7 +40,18 @@ const mutations={
     },
     windowload(state){
         this.replaceState(Object.assign(state,JSON.parse(localStorage.getItem('urun'))))
-        console.log(state)
+        console.log("asdasdasd")
+    },
+    deleteProduct(state,proid){
+            state.total = 0;
+            state.sepet=(state.sepet).filter(function(elem){
+                if(elem.serial_productid !== proid){
+                state.total += parseFloat(elem.serial_market_price)
+                return elem.serial_productid !== proid
+                }
+            })
+            localStorage.clear();
+            localStorage.setItem("urun",JSON.stringify(state))
     }
 };
 const actions={};

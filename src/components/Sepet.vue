@@ -103,7 +103,7 @@ export default {
           }
      },
      watch:{
-        '$store.getters.getCardPro'(){
+        '$store.state.sepet'(){
            this.getPro();
         }
      },

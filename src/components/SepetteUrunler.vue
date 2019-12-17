@@ -9,7 +9,7 @@
                 <p class="product-subtitle">1 adet</p>
             </div>
             <div class="product-remove">
-                <button class="product-removebutton icon-close"></button>
+                <button class="product-removebutton icon-close" @click="remove(product.serial_productid)"></button>
             </div>
             <div class="product-price">
                 <div class="pricebox basket">
@@ -42,6 +42,9 @@ export default {
         changetotal(pr){
             this.$store.commit('changeTotal',pr)
             return pr;
+        },
+        remove(prid){
+             this.$store.commit('deleteProduct',prid)
         }
     },
     computed:{
