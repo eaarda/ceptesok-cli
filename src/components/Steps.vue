@@ -11,15 +11,24 @@
        
        <form>
            
-           <section v-if="step == 1" class="list-item active"> Teslimat Zamanı
+           <section v-if="step == 1">
+            <a href="#"  class="list-item active"> Teslimat Zamanı </a>
+            <a href="#" class="list-item"> Ödeme İşlemleri </a> 
+            <a href="#" class="list-item"> Sipariş Özeti </a>
 
            </section>
            
-           <section v-if="step == 2" class="list-item"> Ödeme İşlemleri>
+           <section v-if="step == 2">
+            <a href="#"  class="list-item"> Teslimat Zamanı </a>
+            <a href="#" class="list-item active"> Ödeme İşlemleri </a> 
+            <a href="#" class="list-item"> Sipariş Özeti </a>
 
            </section>
            
-           <section v-if="step == 3" class="list-item"> Sipariş Özeti>
+           <section v-if="step == 3">
+            <a href="#"  class="list-item"> Teslimat Zamanı </a>
+            <a href="#" class="list-item"> Ödeme İşlemleri </a> 
+            <a href="#" class="list-item active"> Sipariş Özeti </a>
 
            </section>
            
