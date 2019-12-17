@@ -190,19 +190,19 @@
                     <p class="head-subtitle"><span class="basket-quantity">{{getProCo}}</span> Adet Ürün Bulunuyor</p>
                 </div>
                 <ul class="sum-list initialized">
-                    <li class="list-item">
-                    <div class="productbox-mini ">
+                    <li class="list-item" v-for="product in products" :key="product.link_name">
+                    <div class="productbox-mini">
                         <div class="product-image-wrap">
-                            <a href="javascript:;" class="product-image imagefit fit"><img src="https://cdnd.ceptesok.com/product/420x420/939bb_sivi-sabun-lavanta-18-lt.jpg" class="imagefit-img abs"></a> 
+                            <a href="javascript:;" class="product-image imagefit fit"><img :src="'https://cdnd.ceptesok.com/product/420x420/'+ getPicture(product.files[0])"  class="imagefit-img abs"></a> 
                             <!-- <router-link :to="{name: 'Urun',path: '/urun/'+product.link_name, params:{id:product.serial_productid}}"><img :src="'https://cdnd.ceptesok.com/product/420x420/'+ getPicture(product.files[0])" class="imagefit-img abs mCS_img_loaded"></router-link> -->
                         </div>
                         <div class="product-description">
-                            <h3 class="product-title"><a href="javascript:;">Fax Sıvı Sabun Lavanta 1.8 Lt</a></h3>
+                            <h3 class="product-title"><a href="javascript:;">{{product.warranty_description}}</a></h3>
                             <p class="product-subtitle">1 adet</p>
                         </div>
                         <div class="product-price">
                             <div class="pricebox basket">
-                                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">12</span><span class="pricebox-decimal">95</span></div>
+                               <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">{{product.serial_market_price }}</span></div>
                             </div>
                         </div>
                     </div>
@@ -374,6 +374,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </li>
             </ul>
             <div class="sum-total">
