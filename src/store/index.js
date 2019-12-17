@@ -33,9 +33,25 @@ const mutations={
     addProduct(state,proid){
         state.sepet.push(proid)
         state.total+=  parseFloat(proid.serial_market_price)
+        localStorage.setItem("urun",JSON.stringify(state))
     },
     changeTotal(state,price){
         state.total += price;
+    },
+    windowload(state){
+        this.replaceState(Object.assign(state,JSON.parse(localStorage.getItem('urun'))))
+        console.log("asdasdasd")
+    },
+    deleteProduct(state,proid){
+            state.total = 0;
+            state.sepet=(state.sepet).filter(function(elem){
+                if(elem.serial_productid !== proid){
+                state.total += parseFloat(elem.serial_market_price)
+                return elem.serial_productid !== proid
+                }
+            })
+            localStorage.clear();
+            localStorage.setItem("urun",JSON.stringify(state))
     }
 };
 const actions={};

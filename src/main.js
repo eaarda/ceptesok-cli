@@ -147,6 +147,15 @@ const router = new VueRouter({
       path:'/Giris',
       component:Login,
     },
+    {
+      name:'Login',
+      path:'/Kayit',
+      component:Login,
+    },
+    {
+      path:'*',
+      component:Home,
+    },
   ],
   mode :'history'
 })

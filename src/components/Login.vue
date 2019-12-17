@@ -31,10 +31,24 @@
                             <div class="grid-row">
                                 <div class="grid-col nogap-t"> </div>
                             </div>
+                             <div class="grid-row" v-if="!whereiam">
+                                <div class="grid-col">
+                                    <div class="inputwrap type-text">
+                                        <input type="text" name="email" autocomplete="email" placeholder="E-Mail">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="grid-row">
                                 <div class="grid-col">
                                     <div class="inputwrap type-text">
                                         <input type="text" name="phone" autocomplete="tel-national" maxlength="11" placeholder="Cep Telefonu">
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="grid-row" v-if="!whereiam">
+                                <div class="grid-col">
+                                    <div class="inputwrap type-text">
+                                        <input type="text" name="name" autocomplete="name" placeholder="Ad Soyad">
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +60,25 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-row">
+                            <div class="grid-row" v-if="!whereiam">
+                                <div class="grid-col gap-top-high">
+                                    <div class="checkwrap type-checkbox">
+                                        <input type="checkbox" id="register_agreement21">
+                                        <label for="register_agreement21"><span></span>
+                                            <button onclick="checkRegisterModalEnabled()" data-modal="modal_registerterms" class="form-innerlink modaltrigger">Kullanım koşulları</button>'nı okudum,
+                                            <br>onaylıyorum</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-row" v-if="!whereiam"> 
+                                <div class="grid-col">
+                                    <div class="checkwrap type-checkbox">
+                                        <input type="checkbox" id="register_notification21">
+                                        <label for="register_notification21"><span></span> Bana özel kampanyalardan haberdar olmak istiyorum</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-row" v-if="whereiam">
                                 <div class="grid-col gap-top-high">
                                     <div class="checkwrap type-checkbox">
                                         <input type="checkbox" id="input_dummy_4">
@@ -66,8 +98,8 @@
                                 </div>
                             </div>
                             <div class="grid-row">
-                                <div class="grid-col nogap-top form-alternatives"><span class="alternatives-title">Hesabınız yok mu?</span>
-                                    <button data-subject="member-register-embed" data-clickshow-group="member-sections-embed" class="clickshow notoggle">Şimdi Kayıt Ol</button>
+                                <div class="grid-col nogap-top form-alternatives"><span class="alternatives-title">{{hesap}}</span>
+                                    <button @click="$router.push(`${whereiam == 1 ? 'Kayit' : 'Giris'}`)" data-subject="member-register-embed" data-clickshow-group="member-sections-embed" class="clickshow notoggle">{{yazi}}</button>
                                 </div>
                             </div>
                         </div>
@@ -94,8 +126,16 @@ export default {
         headers,
         Altkisim,
     },
+    computed:{
+        whereiam(){
+           return this.$route.path.includes("Giris") ? (true >>> (this.hesap = 'Hesabınız yok mu?',this.yazi="Şimdi Kayıt Ol")) : ((this.hesap = 'Hesabınız var mı?',this.yazi="Giriş Yap") >>> false)
+        }
+    },
     data () {
-    return {}
+    return {
+        hesap:"",
+        yazi:""
+    }
     }
  }
 </script>
