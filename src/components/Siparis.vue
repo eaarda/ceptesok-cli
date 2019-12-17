@@ -240,9 +240,9 @@
                                 <h1 class="head-title">Sepet</h1>
                                 <p class="head-subtitle">4 Adet Ürün Bulunuyor</p>
                             </div>
-                           
-                               <sepette-urunler v-for="product in products" :product="product" :key="product.serial_productid"/>
-                            
+                           <ul class="items-list">
+                            <sepette-urunler v-for="product in products" :product="product" :key="product.serial_productid"/>
+                           </ul>
                             <button class="cart-clear btn smaller hollow darkgray"><i class="icon-trash"></i> Sepeti boşalt</button>
                         </main>
                         <aside class="section checkout-section checkout-sum">
@@ -259,9 +259,7 @@
                             </div>
                             <!---->
                             <div class="sum-controls">
-                                <button class="btn big block green text-big">
-                                    <!---->
-                                    Alışverişi Tamamla <i class="icon-arrow-right"></i></button>
+                                <button class="btn big block green text-big"><router-link to="/steps"> Alışverişi Tamamla </router-link> <i class="icon-arrow-right"></i></button>
                             </div>
                             <!---->
                             <div id="modal_installment_direct" class="modal">
@@ -3094,11 +3092,13 @@ import SepetteUrunler from './SepetteUrunler.vue'
 export default {
     name: 'Siparis',
     components:{
-       Altkisim,
+    Altkisim,
     SepetteUrunler,
    },
     data () {
-    return {};
+    return {
+        products:"",
+    };
   }
 }
 </script>
