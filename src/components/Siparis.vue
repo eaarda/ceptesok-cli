@@ -3098,7 +3098,13 @@ export default {
     data () {
     return {
         products:"",
-    };
+    }
+  },
+  computed(){
+      this.products=this.products=this.$store.state.sepet;
+  },
+  created(){
+      this.products=this.products=this.$store.state.sepet;
   }
 }
 </script>
