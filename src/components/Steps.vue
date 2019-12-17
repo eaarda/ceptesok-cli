@@ -187,24 +187,25 @@
             <aside class="section checkout-section checkout-sum">
                 <div class="section checkout-head">
                     <h1 class="head-title">Sipariş Bilgileri</h1>
-                    <p class="head-subtitle">1 Adet Ürün Bulunuyor</p>
+                    <p class="head-subtitle"><span class="basket-quantity">{{getProCo}}</span> Adet Ürün Bulunuyor</p>
                 </div>
                 <ul class="sum-list initialized">
                     <li class="list-item">
-                        <div class="productbox-mini ">
-                            <div class="product-image-wrap">
-                                <a href="javascript:;" class="product-image imagefit fit"><img src="https://cdnd.ceptesok.com/product/420x420/939bb_sivi-sabun-lavanta-18-lt.jpg" class="imagefit-img abs"></a>
-                            </div>
-                            <div class="product-description">
-                                <h3 class="product-title"><a href="javascript:;">Fax Sıvı Sabun Lavanta 1.8 Lt</a></h3>
-                                <p class="product-subtitle">1 adet</p>
-                            </div>
-                            <div class="product-price">
-                                <div class="pricebox basket">
-                                    <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">12</span><span class="pricebox-decimal">95</span></div>
-                                </div>
+                    <div class="productbox-mini ">
+                        <div class="product-image-wrap">
+                            <a href="javascript:;" class="product-image imagefit fit"><img src="https://cdnd.ceptesok.com/product/420x420/939bb_sivi-sabun-lavanta-18-lt.jpg" class="imagefit-img abs"></a> 
+                            <!-- <router-link :to="{name: 'Urun',path: '/urun/'+product.link_name, params:{id:product.serial_productid}}"><img :src="'https://cdnd.ceptesok.com/product/420x420/'+ getPicture(product.files[0])" class="imagefit-img abs mCS_img_loaded"></router-link> -->
+                        </div>
+                        <div class="product-description">
+                            <h3 class="product-title"><a href="javascript:;">Fax Sıvı Sabun Lavanta 1.8 Lt</a></h3>
+                            <p class="product-subtitle">1 adet</p>
+                        </div>
+                        <div class="product-price">
+                            <div class="pricebox basket">
+                                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">12</span><span class="pricebox-decimal">95</span></div>
                             </div>
                         </div>
+                    </div>
                     </li>
                 </ul>
                 <div class="sum-total">
@@ -213,7 +214,7 @@
                         <br>Toplam Tutar:
                     </p>
                     <div class="pricebox {'plain': true}">
-                        <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">12</span><span class="pricebox-decimal">95</span></div>
+                        <div class="pricebox-content"><span class="currency pricebox-currency"></span> {{$store.state.total}}</div>
                     </div>
                 </div>
                 <!---->
@@ -734,38 +735,68 @@
 <script>
 
 import Altkisim  from './Altkisim.vue'
+import SepetteUrunler from './SepetteUrunler'
 
 export default {
     name: 'Steps',
      components:{
          Altkisim,
+         SepetteUrunler,
     },
     data() {
-        form: {
-            name:null;
-            email:null;
-            phone:null;
-        }
     return { 
         step:1,
         totalsteps: 3,
+        products:"",
     };
   },
-
   methods:{
-      nextStep:function()
-      {
+    nextStep:function()
+    {
         this.step++;
     },
-      prevStep:function()
-      {
-          this.step--;
-      }
+    prevStep:function()
+    {
+        this.step--;
+    },
+    getPro:function(){
+        this.products=this.$store.state.sepet;
+        console.log(this.$store.state.sepet)
+    },
+    getPicture(images){
+            var imgurl;
+            try{
+            if(images.document_href.includes(""))
+            {
+                imgurl= images.document_href   
+            }else{
+                imgurl= "product-default.png"
+            }
+            }catch(err){
+                imgurl= "product-default.png"
+            }
+            return  imgurl;
+        },
   },
-  
-  mounted(){
-
-  }
+  computed:{
+         getProCo:function(){
+             return this.$store.state.sepet.length
+         },
+         totalf:function(){
+             return this.$store.state.total;
+          }
+     },
+     watch:{
+        '$store.state.sepet'(){
+           this.getPro();
+        }
+     },
+  mounted() {
+            this.getPro();
+    },
+    created(){
+        this.products=this.products=this.$store.state.sepet;
+    },
 
 }
 </script>
