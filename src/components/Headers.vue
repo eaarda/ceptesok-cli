@@ -39,7 +39,7 @@
                         <Sepet/> 
                         <div class="right-usercontrols not-logged">
                             <div class="usercontrols-desktop"><i class="icon-user-2 usercontrols-icon"></i> <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-login" class="usercontrols-button top modaltrigger clickshow notoggle">
-                                Giriş Yap
+                                <div  @click="routelogin">Giriş Yap</div>
                                 </button> <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-register" class="usercontrols-button sub clickshow notoggle modaltrigger">
                                 Üye Ol
                                 </button>
@@ -3735,6 +3735,9 @@ export default {
                 this.active=true;
             }
         }
+     },
+     routelogin:function(){
+         if(this.$route.path !== "/" && this.$route.path !== "/Giris" ) this.$router.push("/Giris")
      },
      hideOne:function(e){
           if(this.hideBar==true)
