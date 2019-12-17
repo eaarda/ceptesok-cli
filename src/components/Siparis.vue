@@ -2876,7 +2876,7 @@ export default {
     return {
         active:false,
         show:false,
-        products:"",
+        products:""
     }
     },
     methods:{
@@ -2909,9 +2909,8 @@ export default {
             this.getPro();
     },
     created(){
-        this.products=this.products=this.$store.state.sepet;
-    },
->>>>>>> 2286be4e944c586110945e77d6a3c4ab0406513b
+        this.products=this.$store.state.sepet;
+    }
 }
 </script>
 
