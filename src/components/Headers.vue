@@ -39,9 +39,9 @@
                         <Sepet/> 
                         <div class="right-usercontrols not-logged">
                             <div class="usercontrols-desktop"><i class="icon-user-2 usercontrols-icon"></i> <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-login" class="usercontrols-button top modaltrigger clickshow notoggle">
-                                <div  @click="routelogin('Giris')">Giriş Yap</div>
+                                <div @click="routelogin('Giris')">Giriş Yap</div>
                                 </button> <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-register" class="usercontrols-button sub clickshow notoggle modaltrigger">
-                               <div  @click="routelogin('Kayit')">Üye Ol</div>
+                               <div @click="routelogin('Kayit')">Üye Ol</div>
                                 </button>
                             </div>
                             <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-login" class="usercontrols-mobile modaltrigger clickshow notoggle"><i class="icon-user-2 usercontrols-icon"></i></button>
@@ -1137,7 +1137,7 @@
                         </li>
                     </ul>
                 </div>
-                <div id="top-menu2" class="menu-content">
+                <div id="top-menu2" class="menu-content active">
                     <ul class="menu-items">
                         <li class="items-item">
                             <button class="item-button">Süt</button> 
@@ -2139,7 +2139,7 @@
                 </div>
             </div>
         </div>
-        <div id="modal_login" class="modal login">
+        <div id="modal_login" class="modal login" v-bind:class="{'enabled show':hover}">
             <div class="modal-element">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -2184,7 +2184,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-header"><button class="modal-close"><i class="icon-close"></i></button></div>
+                        <div class="modal-header"><button class="modal-close"><i class="icon-close" @click="hover=false"></i></button></div>
                         <div class="section login-content">
                             <div class="login-right">
                                 <div id="member-login" class="login-form login clickshow-subject noanim grid-container narrow-vertical inputform enable show">
@@ -3722,7 +3722,8 @@ export default {
         subdata:[],
         gor:false,
         hideBar:true,
-        active:false
+        active:false,
+        hover:false,
        }
     },
     methods:{
@@ -3738,6 +3739,9 @@ export default {
      },
      routelogin:function(a){
          if(this.$route.path !== "/" && this.$route.path !== "/Giris" &&  this.$route.path !== "/Kayit") this.$router.push("/"+a)
+         else{
+            this.hover=true;
+         }
      },
      hideOne:function(e){
           if(this.hideBar==true)
