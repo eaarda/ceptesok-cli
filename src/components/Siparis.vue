@@ -20,7 +20,7 @@
                            <ul class="items-list">
                             <sepette-urunler v-for="product in products" :product="product" :key="product.serial_productid"/>
                            </ul>
-                            <button class="cart-clear btn smaller hollow darkgray"><i class="icon-trash"></i> Sepeti boşalt</button>
+                            <button class="cart-clear btn smaller hollow darkgray" @click="deleteall"><i class="icon-trash"></i> Sepeti boşalt</button>
                         </main>
                         <aside class="section checkout-section checkout-sum">
                             <!---->
@@ -2880,6 +2880,9 @@ export default {
     }
     },
     methods:{
+        deleteall:function(){
+            this.$store.commit('deleteProductAll')
+        },
           go:function(e){
             if(this.active == true){
                 this.active=false; this.show=false;

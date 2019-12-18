@@ -56,6 +56,10 @@ const mutations={
             state.total = a.toFixed(2)
             localStorage.clear();
             localStorage.setItem("urun",JSON.stringify(state))
+    },
+    deleteProductAll(state){
+        state.total = 0;
+        state.sepet=[];
     }
 };
 const actions={};
