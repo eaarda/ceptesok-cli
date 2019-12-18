@@ -13,7 +13,7 @@
             </div>
             <div class="product-price">
                 <div class="pricebox basket">
-                    <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">{{product.serial_market_price }}</span></div>
+                    <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">{{product.serial_market_price ? product.serial_market_price : product.min_price }}</span></div>
                 </div>
             </div>
         </div>

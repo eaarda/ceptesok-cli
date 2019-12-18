@@ -6,7 +6,7 @@ Vue.use(Vuex);
 const state={
     SViewSquare:true,
     sepet:[],
-    total:0
+    total:Number
 };
 const getters={
     getGridState(state){
@@ -32,7 +32,9 @@ const mutations={
     },
     addProduct(state,proid){
         state.sepet.push(proid)
-        state.total+=  parseFloat(proid.serial_market_price)
+        var a=parseFloat(state.total);
+        proid.serial_market_price !== undefined ? a += Number(proid.serial_market_price) : a +=  Number(proid.min_price)
+        state.total = a.toFixed(2)
         localStorage.setItem("urun",JSON.stringify(state))
     },
     changeTotal(state,price){
@@ -46,7 +48,7 @@ const mutations={
             state.total = 0;
             state.sepet=(state.sepet).filter(function(elem){
                 if(elem.serial_productid !== proid){
-                state.total += parseFloat(elem.serial_market_price)
+                elem.serial_market_price !== undefined ? state.total+=  parseFloat(elem.serial_market_price) : state.total +=  parseFloat(elem.min_price)
                 return elem.serial_productid !== proid
                 }
             })

@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="content-controls">
-                        <button v-on:click="go()" data-modal="modal_stores" class="controls-addtocart btn green text-big modaltrigger"><i class="icon-basket"></i> <span>Sepete Ekle</span></button>
+                        <button v-on:click="sepeteEkle(data.payload.product)" data-modal="modal_stores" class="controls-addtocart btn green text-big modaltrigger"><i class="icon-basket"></i> <span>Sepete Ekle</span></button>
                         <!---->
                         <!---->
                         <!---->
@@ -108,6 +108,10 @@ export default {
             this.init()
            },
     methods :{
+        sepeteEkle:function(a){
+             this.$store.commit('addProduct',a)
+             console.log(a)
+       },
          init () {
            fetch('https://www.ceptesok.com/api/v1/products/'+this.$route.params.id+'/null')
            .then(response => response.json())
