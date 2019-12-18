@@ -195,7 +195,7 @@
                         <br>Toplam Tutar:
                     </p>
                     <div class="pricebox {'plain': true}">
-                        <div class="pricebox-content"><span class="currency pricebox-currency"></span> {{$store.state.total}}</div>
+                        <div class="pricebox-content"><span class="currency pricebox-currency"></span> {{$store.state.total.toFixed(2)}}</div>
                     </div>
                 </div>
                 <div class="sum-controls">
@@ -343,7 +343,7 @@
                     <br>Toplam Tutar:
                 </p>
                 <div class="pricebox {'plain': true}">
-                    <div class="pricebox-content"><span class="currency pricebox-currency"></span> {{$store.state.total}}</div>
+                    <div class="pricebox-content"><span class="currency pricebox-currency"></span> {{$store.state.total.toFixed(2)}}</div>
                 </div>
             </div>
             <!---->
