@@ -131,7 +131,7 @@
                     <ul class="group-slots">
                         <li class="slots-slot">
                             <div class="checkwrap big square slot-time">
-                                <input id="825698610" type="radio" value="825698610">
+                                <input type="radio" name="deliverytime_slot" id="825698610" value="825698610">
                                 <label for="825698610"><span></span>17:00 - 18:00</label>
                             </div>
                             <div class="slot-status">Müsait</div>
@@ -141,7 +141,7 @@
                         </li>
                         <li class="slots-slot">
                             <div class="checkwrap big square slot-time">
-                                <input id="825706008" type="radio" value="825706008">
+                                <input type="radio" name="deliverytime_slot" id="825706008" value="825706008">
                                 <label for="825706008"><span></span>18:00 - 19:00</label>
                             </div>
                             <div class="slot-status">Müsait</div>
@@ -151,7 +151,7 @@
                         </li>
                         <li class="slots-slot">
                             <div class="checkwrap big square slot-time">
-                                <input id="825713406" type="radio" value="825713406">
+                                <input type="radio" name="deliverytime_slot" id="825713406" value="825713406">
                                 <label for="825713406"><span></span>19:00 - 20:00</label>
                             </div>
                             <div class="slot-status">Müsait</div>
@@ -189,25 +189,6 @@
                     <h1 class="head-title">Sipariş Bilgileri</h1>
                     <p class="head-subtitle"><span class="basket-quantity">{{getProCo}}</span> Adet Ürün Bulunuyor</p>
                 </div>
-                <ul class="sum-list initialized">
-                    <li class="list-item" v-for="product in products" :key="product.link_name">
-                    <div class="productbox-mini">
-                        <div class="product-image-wrap">
-                            <a href="javascript:;" class="product-image imagefit fit"><img :src="'https://cdnd.ceptesok.com/product/420x420/'+ getPicture(product.files[0])"  class="imagefit-img abs"></a> 
-                            <!-- <router-link :to="{name: 'Urun',path: '/urun/'+product.link_name, params:{id:product.serial_productid}}"><img :src="'https://cdnd.ceptesok.com/product/420x420/'+ getPicture(product.files[0])" class="imagefit-img abs mCS_img_loaded"></router-link> -->
-                        </div>
-                        <div class="product-description">
-                            <h3 class="product-title"><a href="javascript:;">{{product.warranty_description}}</a></h3>
-                            <p class="product-subtitle">1 adet</p>
-                        </div>
-                        <div class="product-price">
-                            <div class="pricebox basket">
-                               <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">{{product.serial_market_price }}</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    </li>
-                </ul>
                 <div class="sum-total">
                     <p class="total-title">
                         KDV Dahil
@@ -217,7 +198,6 @@
                         <div class="pricebox-content"><span class="currency pricebox-currency"></span> {{$store.state.total}}</div>
                     </div>
                 </div>
-                <!---->
                 <div class="sum-controls">
                     <button disabled="disabled" class="btn big block green text-big"><i class="icon-security-2"></i> Güvenli Ödemeye Geç <i class="icon-arrow-right"></i></button>
                 </div>
@@ -334,7 +314,6 @@
                 <div data-v-059bbdad="" class="grid-col x4 s-x12">
                     <div data-v-059bbdad="" class="inputwrap light big type-text">
                         <label data-v-059bbdad="" for="cardCvv" class="input-label">Güvenlik Kodu</label>
-                        <button data-v-059bbdad="" data-tip="Kartın arka kısmında en sağda bulunan 3 haneli sayı." class="input-icon big icon-tooltip" title=""></button>
                         <input data-v-059bbdad="" type="text" id="cardCvv" data-mask="000" autocomplete="off">
                     </div>
                 </div>
@@ -346,7 +325,7 @@
                 </div>
             </div>
             </div>
-            <div data-v-059bbdad="" class="payment-masterpass"><img data-v-059bbdad="" src="/assets/img/payment/masterpass.png" class="masterpass-logo">
+            <div data-v-059bbdad="" class="payment-masterpass"><img data-v-059bbdad="" src="../img/masterpass.png" class="masterpass-logo">
             <p data-v-059bbdad="">Ödeme altyapımız Mastercard uygulaması olan Masterpass tarafından sağlanmaktadır ve işlem güvenliğiniz Mastercard güvencesi altındadır.</p>
             </div>
         
@@ -356,34 +335,15 @@
             <aside data-v-059bbdad="" class="section checkout-section checkout-sum">
             <div class="section checkout-head">
                 <h1 class="head-title">Sipariş Bilgileri</h1>
-                <p class="head-subtitle">1 Adet Ürün Bulunuyor</p>
+                <p class="head-subtitle"><span class="basket-quantity">{{getProCo}}</span> Adet Ürün Bulunuyor</p>
             </div>
-            <ul class="sum-list initialized">
-                <li class="list-item">
-                    <div class="productbox-mini ">
-                        <div class="product-image-wrap">
-                            <a href="javascript:;" class="product-image imagefit fit"><img src="https://cdnd.ceptesok.com/product/420x420/939bb_sivi-sabun-lavanta-18-lt.jpg" class="imagefit-img abs"></a>
-                        </div>
-                        <div class="product-description">
-                            <h3 class="product-title"><a href="javascript:;">Fax Sıvı Sabun Lavanta 1.8 Lt</a></h3>
-                            <p class="product-subtitle">1 adet</p>
-                        </div>
-                        <div class="product-price">
-                            <div class="pricebox basket">
-                                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">12</span><span class="pricebox-decimal">95</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </li>
-            </ul>
             <div class="sum-total">
                 <p class="total-title">
                     KDV Dahil
                     <br>Toplam Tutar:
                 </p>
                 <div class="pricebox {'plain': true}">
-                    <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">12</span><span class="pricebox-decimal">95</span></div>
+                    <div class="pricebox-content"><span class="currency pricebox-currency"></span> {{$store.state.total}}</div>
                 </div>
             </div>
             <!---->
@@ -472,7 +432,6 @@
                                             </tr>
                                             <tr>
                                                 <td>Telefon</td>
-                                                <td>5388101580</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -610,7 +569,6 @@
                                             </tr>
                                             <tr>
                                                 <td>Telefon</td>
-                                                <td>5388101580</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -719,6 +677,16 @@
             <a href="#" class="list-item"> Ödeme İşlemleri </a> 
             <a href="#" class="list-item active"> Sipariş Özeti </a>
 
+            <div class = "section wrapper checkout-wrap checkout-cart">
+                <svg id="checkmark-svg" class="runanimation" data-name="Layer 1" viewBox="0 0 193.3 193.3"><circle class="cls-1 circle" cx="96.65" cy="96.65" r="94.15"/><polyline class="cls-1 checkmark" points="46.9 101.4 76.9 131.4 146.4 61.9"/></svg>  
+                   <div class = "text-area">
+                    <div class="pTxt"> Siparişiniz Alındı </div>
+            </div>
+
+            
+            </div>
+
+         
            </section>
            
            
@@ -734,6 +702,7 @@
 </template>
 
 <script>
+
 
 import Altkisim  from './Altkisim.vue'
 import SepetteUrunler from './SepetteUrunler'
@@ -803,5 +772,223 @@ export default {
 </script>
 
 <style>
+
+.cls-1 {
+  fill: none;
+  stroke: #231f20;
+  stroke-miterlimit: 10;
+  stroke-width: 5px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+svg .cls-1 {
+  stroke: green;
+}
+
+.circle {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+}
+
+.checkmark {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+}
+
+.runanimation .circle {
+  -webkit-animation: 2.5s circleDraw forwards;
+          animation: 2.5s circleDraw forwards;
+}
+.runanimation .checkmark {
+  -webkit-animation: 0.75s checkmarkDraw forwards;
+          animation: 0.75s checkmarkDraw forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes circleDraw {
+  from {
+    stroke-dashoffset: 700;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circleDraw {
+  from {
+    stroke-dashoffset: 700;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes checkmarkDraw {
+  from {
+    stroke-dashoffset: 150;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes checkmarkDraw {
+  from {
+    stroke-dashoffset: 150;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body{
+  background:#e6e6e6;
+  font-family: 'Open Sans', sans-serif;
+}
+.text-area{
+  text-align:center;
+  margin-top: 150px;
+}
+.pTxt{
+  font-size:40px;
+  color: green;
+}
+.text-area>a{
+  font-size:35px;
+}
+.checkmark-circle {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.checkmark-circle .background {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #2EB150;
+  position: absolute;
+}
+.checkmark-circle .checkmark {
+  border-radius: 5px;
+}
+.checkmark-circle .checkmark.draw:after {
+  -webkit-animation-delay: 100ms;
+  -moz-animation-delay: 100ms;
+  animation-delay: 100ms;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-name: checkmark;
+  -moz-animation-name: checkmark;
+  animation-name: checkmark;
+  -webkit-transform: scaleX(-1) rotate(135deg);
+  -moz-transform: scaleX(-1) rotate(135deg);
+  -ms-transform: scaleX(-1) rotate(135deg);
+  -o-transform: scaleX(-1) rotate(135deg);
+  transform: scaleX(-1) rotate(135deg);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.checkmark-circle .checkmark:after {
+  opacity: 1;
+  height: 75px;
+  width: 37.5px;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
+  border-right: 15px solid white;
+  border-top: 15px solid white;
+  border-radius: 2.5px !important;
+  content: '';
+  left: 25px;
+  top: 75px;
+  position: absolute;
+}
+
+@-webkit-keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 37.5px;
+    opacity: 1;
+  }
+  40% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+  100% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+}
+@-moz-keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 37.5px;
+    opacity: 1;
+  }
+  40% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+  100% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+}
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 37.5px;
+    opacity: 1;
+  }
+  40% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+  100% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+}
+
 
 </style>

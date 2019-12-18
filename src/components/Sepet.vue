@@ -4,7 +4,7 @@
         <div class="cartinfo-basket icon-cart-2"><i class="cartinfo-quantity">{{getProCo}}</i></div>
         <div class="cartinfo-total">
             <div class="pricebox plain">
-                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">0</span><span class="pricebox-decimal">00</span></div>
+                <div class="pricebox-content"><span class="currency pricebox-currency"></span>{{$store.state.total}}</div>
             </div>
         </div>
         <span class="cartinfo-text">Sepet</span>

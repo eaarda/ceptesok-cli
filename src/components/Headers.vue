@@ -44,7 +44,7 @@
                                <div @click="routelogin('Kayit')">Üye Ol</div>
                                 </button>
                             </div>
-                            <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-login" class="usercontrols-mobile modaltrigger clickshow notoggle"><i class="icon-user-2 usercontrols-icon"></i></button>
+                            <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-login" class="usercontrols-mobile modaltrigger clickshow notoggle"><div @click="routelogin('Giris')"><i class="icon-user-2 usercontrols-icon"></i></div></button>
                         </div>
                     </div>
                 </div>
