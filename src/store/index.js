@@ -46,12 +46,14 @@ const mutations={
     },
     deleteProduct(state,proid){
             state.total = 0;
+            var a=0;
             state.sepet=(state.sepet).filter(function(elem){
                 if(elem.serial_productid !== proid){
-                elem.serial_market_price !== undefined ? state.total+=  parseFloat(elem.serial_market_price) : state.total +=  parseFloat(elem.min_price)
+                elem.serial_market_price !== undefined ? a += Number(elem.serial_market_price) : a +=  Number(elem.min_price)
                 return elem.serial_productid !== proid
                 }
             })
+            state.total = a.toFixed(2)
             localStorage.clear();
             localStorage.setItem("urun",JSON.stringify(state))
     }
