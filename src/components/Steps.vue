@@ -863,6 +863,7 @@ body{
 }
 .pTxt{
   font-size:40px;
+  color: green;
 }
 .textarea>a{
   font-size:35px;
