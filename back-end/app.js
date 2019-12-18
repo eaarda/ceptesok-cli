@@ -12,7 +12,11 @@ MongoClient.connect('mongodb+srv://elifberkay:berkay1234.@ceptesok-homz1.mongodb
       console.log('listening on 5000')
     })
   })
-  
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true , limit : '1mb'})); 
 app.use(bodyParser.json());
@@ -30,7 +34,7 @@ app.get("/api/v1/products",async(req,res)=>{
          if(err){
             res.status(204).send("err")
          }
-         res.status(200).send(results[0])
+         res.status(200).json(JSON.stringify(results[0]))
          
       })
     }) 
