@@ -106,6 +106,7 @@ export default {
    },
    methods:{
        focusx:function(event){
+           
             document.getElementById("focus").scrollIntoView(true);
             document.getElementById('degisiklikicin').childNodes[0].className="order-opt"
             document.getElementById('degisiklikicin').childNodes[2].className="order-opt"

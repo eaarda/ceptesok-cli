@@ -15,6 +15,7 @@
             <div class="wrapper">
                 <div class="header-top"><router-link to="/"><img src="../img/logo.svg" class="header-logo"></router-link></div>
                 <div class="header-mid">
+                    <button class="mid-mobile-menutrigger mobilemenu-trigger" @click="degisac"><i class="icon-menu menutrigger-icon"></i> <span class="menutrigger-text">Kategoriler</span> <span class="menutrigger-icon-search"><i class="icon-search"></i></span></button>
                     <div class="mid-left">
                         <div class="left-button not-selected">
                             <i class="button-icon icon-store-location"></i> 
@@ -2338,10 +2339,10 @@
         </div>
         
         <div>
-            <div id="mobilemenu">
+            <div id="mobilemenu" v-bind:class="{'active show' : ac}">
                 <div class="mobilemenu-head inputform">
                     <div class="head-wrap wrapper">
-                        <button class="mobilemenu-close"><i class="icon-close"></i></button> 
+                        <button class="mobilemenu-close" @click="degisac">X</button> 
                         <div class="head-search inputwrap"><button type="button" class="search-submit"><i class="icon-search"></i></button> <input type="text" placeholder="Ürün, Marka Ara" class="search-input"></div>
                     </div>
                 </div>
@@ -3724,9 +3725,13 @@ export default {
         hideBar:true,
         active:false,
         hover:false,
+        ac:false
        }
     },
     methods:{
+    degisac:function(){
+        this.ac == false ? this.ac=true : this.ac=false
+    },
      activeChange:function(e)
      {
         if(e.path[0].dataset.menu =="menu-mobile" || e.path[0].className=="icon-menu"){
