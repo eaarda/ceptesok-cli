@@ -161,7 +161,7 @@
                         </li>
                         <li class="slots-slot">
                             <div class="checkwrap big square slot-time">
-                                <input disabled="disabled" type="radio" name="deliverytime_slot" id="notSelectable" value="notSelectable">
+                                <input id="notSelectable" disabled="disabled" type="radio" value="notSelectable">
                                 <label for="notSelectable"><span></span>20:00 - 21:00</label>
                             </div>
                             <div class="slot-status">Market Hizmet Veremiyor</div>
@@ -171,7 +171,7 @@
                         </li>
                         <li class="slots-slot">
                             <div class="checkwrap big square slot-time">
-                                <input disabled="disabled" type="radio" name="deliverytime_slot" id="notSelectable" value="notSelectable">
+                                <input id="notSelectable" disabled="disabled" type="radio" value="notSelectable">
                                 <label for="notSelectable"><span></span>21:00 - 22:00</label>
                             </div>
                             <div class="slot-status">Market Hizmet Veremiyor</div>
@@ -314,7 +314,6 @@
                 <div data-v-059bbdad="" class="grid-col x4 s-x12">
                     <div data-v-059bbdad="" class="inputwrap light big type-text">
                         <label data-v-059bbdad="" for="cardCvv" class="input-label">Güvenlik Kodu</label>
-                        <button data-v-059bbdad="" data-tip="Kartın arka kısmında en sağda bulunan 3 haneli sayı." class="input-icon big icon-tooltip" title=""></button>
                         <input data-v-059bbdad="" type="text" id="cardCvv" data-mask="000" autocomplete="off">
                     </div>
                 </div>
@@ -680,7 +679,7 @@
 
             <div class = "section wrapper checkout-wrap checkout-cart">
                 <svg id="checkmark-svg" class="runanimation" data-name="Layer 1" viewBox="0 0 193.3 193.3"><circle class="cls-1 circle" cx="96.65" cy="96.65" r="94.15"/><polyline class="cls-1 checkmark" points="46.9 101.4 76.9 131.4 146.4 61.9"/></svg>  
-                   <div class = "textarea">
+                   <div class = "text-area">
                     <div class="pTxt"> Siparişiniz Alındı </div>
             </div>
 
@@ -856,7 +855,7 @@ body{
   background:#e6e6e6;
   font-family: 'Open Sans', sans-serif;
 }
-.textarea{
+.text-area{
   text-align:center;
   margin-top: 150px;
 }
@@ -864,7 +863,7 @@ body{
   font-size:40px;
   color: green;
 }
-.textarea>a{
+.text-area>a{
   font-size:35px;
 }
 .checkmark-circle {
