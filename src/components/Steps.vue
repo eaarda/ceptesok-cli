@@ -131,7 +131,7 @@
                     <ul class="group-slots">
                         <li class="slots-slot">
                             <div class="checkwrap big square slot-time">
-                                <input id="825698610" type="radio" value="825698610">
+                                <input type="radio" name="deliverytime_slot" id="825698610" value="825698610">
                                 <label for="825698610"><span></span>17:00 - 18:00</label>
                             </div>
                             <div class="slot-status">Müsait</div>
@@ -141,7 +141,7 @@
                         </li>
                         <li class="slots-slot">
                             <div class="checkwrap big square slot-time">
-                                <input id="825706008" type="radio" value="825706008">
+                                <input type="radio" name="deliverytime_slot" id="825706008" value="825706008">
                                 <label for="825706008"><span></span>18:00 - 19:00</label>
                             </div>
                             <div class="slot-status">Müsait</div>
@@ -151,7 +151,7 @@
                         </li>
                         <li class="slots-slot">
                             <div class="checkwrap big square slot-time">
-                                <input id="825713406" type="radio" value="825713406">
+                                <input type="radio" name="deliverytime_slot" id="825713406" value="825713406">
                                 <label for="825713406"><span></span>19:00 - 20:00</label>
                             </div>
                             <div class="slot-status">Müsait</div>
@@ -161,7 +161,7 @@
                         </li>
                         <li class="slots-slot">
                             <div class="checkwrap big square slot-time">
-                                <input id="notSelectable" disabled="disabled" type="radio" value="notSelectable">
+                                <input disabled="disabled" type="radio" name="deliverytime_slot" id="notSelectable" value="notSelectable">
                                 <label for="notSelectable"><span></span>20:00 - 21:00</label>
                             </div>
                             <div class="slot-status">Market Hizmet Veremiyor</div>
@@ -171,7 +171,7 @@
                         </li>
                         <li class="slots-slot">
                             <div class="checkwrap big square slot-time">
-                                <input id="notSelectable" disabled="disabled" type="radio" value="notSelectable">
+                                <input disabled="disabled" type="radio" name="deliverytime_slot" id="notSelectable" value="notSelectable">
                                 <label for="notSelectable"><span></span>21:00 - 22:00</label>
                             </div>
                             <div class="slot-status">Market Hizmet Veremiyor</div>
@@ -858,7 +858,6 @@ body{
 }
 .textarea{
   text-align:center;
-  
   margin-top: 150px;
 }
 .pTxt{
