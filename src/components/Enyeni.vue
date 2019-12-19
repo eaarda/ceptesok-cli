@@ -46,7 +46,7 @@
     <div class="product-content">
         <!---->
         <div class="product-image-wrap">
-            <a :href="'https://www.ceptesok.com/'+ product.link_name" class="product-image imagefit fit"><img class="imagefit-img abs" :src="'https://cdnd.ceptesok.com/product/420x420/'+ getPicture(product.files[0])"></a>
+            <router-link :to="{name: 'Urun',path: '/urun/'+product.link_name, params:{id:product.serial_productid}}"><img class="imagefit-img abs" :src="'https://cdnd.ceptesok.com/product/420x420/'+ getPicture(product.files[0])"></router-link>
         </div>
         <div class="product-price">
             <div class="pricebox">
@@ -54,7 +54,7 @@
             </div>
         </div>
         <div class="product-description">
-        <h3 class="product-title"><router-link :to="{name: 'Urun',path: '/urun/'+product.link_name, params:{id:product.serial_productid}}"> <h3 class="product-title">{{product.warranty_description}}</h3></router-link></h3>
+        <router-link :to="{name: 'Urun',path: '/urun/'+product.link_name, params:{id:product.serial_productid}}"> <h3 class="product-title">{{product.warranty_description}}</h3></router-link>
             <p class="product-subtitle">1 {{gettype(product.unit)}}</p>
             <!---->
             <!---->

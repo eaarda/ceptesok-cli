@@ -2,7 +2,7 @@
     <div v-if="gor">
         <div v-if="!list">
             <div class="wrappers" v-for="product in data.payload.products" :key="product.data">
-                <div class="productC-img">
+                <div class="productC-img"> 
               <router-link :to="{name: 'Urun',path: '/urun/'+product.link_name, params:{id:product.serial_productid}}">  <img :src="'https://cdnd.ceptesok.com/product/420x420/'+ getPicture(product.files[0])" height="420" width="327"></router-link>
                 </div>
                 <div class="productC-info">
