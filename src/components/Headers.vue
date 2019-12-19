@@ -2352,7 +2352,7 @@
                             <h3 class="menu-title">Kategoriler</h3>
                             <ul class="menu-list">
                                 <li class="list-item has-sub">
-                                    <button class="list-button">Et &amp;&nbsp;Tavuk &amp;&nbsp;Hindi &amp;&nbsp;Balık</button> 
+                                    <button class="list-button"><router-link to="/et">Et &amp;&nbsp;Tavuk &amp;&nbsp;Hindi &amp;&nbsp;Balık</router-link></button> 
                                     <div class="menu-submenu">
                                         <button class="submenu-back">Et &amp;&nbsp;Tavuk &amp;&nbsp;Hindi &amp;&nbsp;Balık</button> 
                                         <div class="menu-wrap wrapper">
@@ -2422,7 +2422,7 @@
                                     </div>
                                 </li>
                                 <li class="list-item has-sub">
-                                    <button class="list-button">Süt, Yoğurt ve&nbsp;Süt Ürünleri</button> 
+                                    <button class="list-button"><router-link to="/sut">Süt, Yoğurt ve&nbsp;Süt Ürünleri</router-link></button> 
                                     <div class="menu-submenu">
                                         <button class="submenu-back">Süt, Yoğurt ve&nbsp;Süt Ürünleri</button> 
                                         <div class="menu-wrap wrapper">
@@ -2698,7 +2698,7 @@
                                     </div>
                                 </li>
                                 <li class="list-item has-sub">
-                                    <button class="list-button">Kahvaltılık</button> 
+                                    <button class="list-button"><router-link to="/kahvaltilik">Kahvaltılık</router-link></button> 
                                     <div class="menu-submenu">
                                         <button class="submenu-back">Kahvaltılık</button> 
                                         <div class="menu-wrap wrapper">
@@ -3356,7 +3356,7 @@
                                     </div>
                                 </li>
                                 <li class="list-item has-sub">
-                                    <button class="list-button">Temizlik</button> 
+                                    <button class="list-button"><router-link to="/temizlik">Temizlik</router-link></button> 
                                     <div class="menu-submenu">
                                         <button class="submenu-back">Temizlik</button> 
                                         <div class="menu-wrap wrapper">
