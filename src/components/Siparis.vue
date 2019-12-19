@@ -36,7 +36,7 @@
                             </div>
                             <!---->
                             <div class="sum-controls">
-                                <button class="btn big block green text-big"><router-link to="/steps"> Alışverişi Tamamla </router-link> <i class="icon-arrow-right"></i></button>
+                                <button class="btn big block green text-big"><router-link to="/Steps"> Alışverişi Tamamla </router-link> <i class="icon-arrow-right"></i></button>
                             </div>
                             <!---->
                             <div id="modal_installment_direct" class="modal">
@@ -2865,12 +2865,14 @@
 <script>
 import Altkisim  from './Altkisim.vue'
 import SepetteUrunler from './SepetteUrunler.vue'
+import Steps from './Steps.vue'
 
 export default {
     name: 'Siparis',
     components:{
     Altkisim,
     SepetteUrunler,
+    Steps,
    },
     data () {
     return {

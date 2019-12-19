@@ -886,7 +886,7 @@ body.indicator-container>indicator-loader {
 }
 .owl-carousel .owl-item img {
 	display:block;
-	width:100%;
+	width:75%;
 	-webkit-transform-style:preserve-3d
 }
 .owl-carousel .owl-dots.disabled,
