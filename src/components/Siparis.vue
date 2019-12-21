@@ -5,7 +5,7 @@
         <div id="checkout_app">
             <div>
                 <header class="checkout">
-                    <div class="wrapper header-wrap"><a href="/siparis/#/sepet" class="header-control header-backlink"><i class="control-icon icon-arrow-left"></i> Sepete Geri Dön</a>
+                    <div class="wrapper header-wrap"><a href="/siparis" class="header-control header-backlink"><i class="control-icon icon-arrow-left"></i> Sepete Geri Dön</a>
                     <a href="/" class="header-logo"><img src="../img/logo.svg"></a>
                     </div>
                     <a href="#"><img alt="Yukarı Çık" class="yukarikaydir" src="../img/yc.png" style="display: block;"></a>

@@ -47,12 +47,6 @@ export default {
              this.$store.commit('deleteProduct',prid)
         }
     },
-    computed:{
-        getPro(){
-            return  this.$store.getters.getCardPro;
-        }
-    },
-    
     data () {
     return {
     };

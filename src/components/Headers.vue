@@ -40,9 +40,9 @@
                         <Sepet/> 
                         <div class="right-usercontrols not-logged">
                             <div class="usercontrols-desktop"><i class="icon-user-2 usercontrols-icon"></i> <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-login" class="usercontrols-button top modaltrigger clickshow notoggle">
-                                <div @click="routelogin('Giris')">Giriş Yap</div>
+                                <div @click="routelogin('Giris')" v-if="!isloggedin">Giriş Yap</div><div v-if="isloggedin">{{this.$store.state.nsname}}</div>
                                 </button> <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-register" class="usercontrols-button sub clickshow notoggle modaltrigger">
-                               <div @click="routelogin('Kayit')">Üye Ol</div>
+                               <div @click="routelogin('Kayit')" v-if="!isloggedin">Üye Ol</div>
                                 </button>
                             </div>
                             <button data-modal="modal_login" data-clickshow-group="loginform-sections" data-subject="member-login" class="usercontrols-mobile modaltrigger clickshow notoggle"><div @click="routelogin('Giris')"><i class="icon-user-2 usercontrols-icon"></i></div></button>
@@ -3725,7 +3725,8 @@ export default {
         hideBar:true,
         active:false,
         hover:false,
-        ac:false
+        ac:false,
+        isloggedin:false,
        }
     },
     methods:{
@@ -3786,7 +3787,7 @@ export default {
             }
         }
         return result;
-     }
+     },
     },
     created() {
         fetch('https://www.ceptesok.com/api/v1/categories')
@@ -3794,13 +3795,15 @@ export default {
         .then(data => {
          this.data = data;
          setTimeout(() => (this.gor = true), 3000);
-       
          this.gor=true;
+         this.$store.state.token !== 0 ?  this.isloggedin=true :  this.isloggedin=false
           });
-        
-          
-       
-        }
+        },
+        watch: {
+            '$store.state.token'(){
+                this.isloggedin=true;
+            }
+        },
 }
 </script>
 <style>

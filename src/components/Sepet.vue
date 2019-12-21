@@ -4,7 +4,7 @@
         <div class="cartinfo-basket icon-cart-2"><i class="cartinfo-quantity">{{getProCo}}</i></div>
         <div class="cartinfo-total">
             <div class="pricebox plain">
-                <div class="pricebox-content"><span class="currency pricebox-currency"></span>{{$store.state.total}}</div>
+                <div class="pricebox-content"><span class="currency pricebox-currency"></span>{{totalf}}</div>
             </div>
         </div>
         <span class="cartinfo-text">Sepet</span>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="controls-buttons grid-row">
-                        <div class="grid-col gap-top-high"><a href="/siparis/#/sepet" class="btn green block">Şimdi Satın Al</a></div>
+                        <div class="grid-col gap-top-high"><div class="btn green block" @click="$router.push('/siparis')">Şimdi Satın Al</div></div>
                     </div>
                 </div>
                 <div class="basket-controls empty grid-container narrow-vertical">
