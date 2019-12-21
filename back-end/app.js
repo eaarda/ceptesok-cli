@@ -10,7 +10,7 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 var db
 
-MongoClient.connect('mongodb+srv://elifberkay:berkay1234.@ceptesok-homz1.mongodb.net/sok?retryWrites=true&w=majority', (err, client) => {
+MongoClient.connect('mongodb+srv://elifberkay:*@ceptesok-homz1.mongodb.net/sok?retryWrites=true&w=majority', (err, client) => {
     if (err) return console.log(err)
     db = client.db('sok') // whatever your database name is
     app.listen(process.env.PORT || 5000, () => {
